@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector} from "react-redux"
 import { signInFailure, signInSuccess} from "../redux/user/userSlice.js"
+import OAuth from "../components/OAuth.jsx";
 
 export default function SingnIn() {
   const [formData, setFormData] = useState({});
@@ -57,7 +58,9 @@ export default function SingnIn() {
         <button className="bg-slate-950 p-3 rounded-lg hover:opacity-80 text-white">
           Sign In
         </button>
+        <OAuth/>
       </form>
+      
       <div className="flex gap-2 mt-5">
         <p className="text-white">Dont have an account?</p>
         <Link to={"/sign-up"}>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import OAuth from "../components/OAuth.jsx";
 
 export default function SingnUp() {
   const [formData, setFormData] = useState({});
@@ -61,6 +62,7 @@ export default function SingnUp() {
         <button className="bg-slate-950 p-3 rounded-lg hover:opacity-80 text-white">
           Sign Up
         </button>
+        <OAuth/>
       </form>
       <div className="flex gap-2 mt-5">
         <p className="text-white">Have an account?</p>

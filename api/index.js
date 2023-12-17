@@ -19,7 +19,7 @@ app.use(express.json());
 app.listen(3000, ()=>{
     console.log("Server running on port 3000!")
 })
-// app.use(cors({origin: "http://localhost:5173", credential: true}))
+
 app.use('/api/user', userRouter)
 app.use('/api/auth', authRouter)
 app.use((err, req, res, next)=>{
